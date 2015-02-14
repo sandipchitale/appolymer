@@ -1,0 +1,16 @@
+{
+	"name": "Appolymer",
+	"description": "A template for Polymer based App",
+	"version": "1.0",
+	"app": {
+		"background": {
+			"page": "background.html"
+		}
+	},
+	"permissions": ["system.cpu", "clipboardWrite"],
+	"icons": {
+		"16": "appolymer16.png",
+		"128": "appolymer128.png"
+	},
+	"manifest_version": 2
+}
