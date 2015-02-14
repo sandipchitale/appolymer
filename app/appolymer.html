@@ -27,28 +27,14 @@
 						<core-item icon="help" label="Help"></core-item>
 					</core-menu>
 				</core-header-panel>
-					<div tool style="cursor: move; -webkit-app-region: drag;" flex> Appolymer </div>
-					<paper-icon-button tool icon="remove" on-click='{{minimizeButtonHandler}}'></paper-icon-button>
-					<paper-icon-button tool icon="fullscreen" on-click='{{maximizeButtonHandler}}'></paper-icon-button>
-					<paper-icon-button tool icon="close" on-click='{{exitButtonHandler}}'></paper-icon-button>
+				<div tool on-dblclick='{{ maximizeButtonHandler}}' flex> Appolymer </div>
+				<paper-icon-button tool icon="remove" on-click='{{minimizeButtonHandler}}'></paper-icon-button>
+				<paper-icon-button tool icon="fullscreen" on-click='{{maximizeButtonHandler}}'></paper-icon-button>
+				<paper-icon-button tool icon="close" on-click='{{exitButtonHandler}}'></paper-icon-button>
 				<div class="content" horizontal center-justified layout>
 					<core-icon class="polymer256x256" src="images/polymer.png"></core-icon>
 				</div>
 			</core-scaffold>
-			<!-- <core-header-pane flex>
-			<core-toolbar>
-			<paper-icon-button icon="polymer"></paper-icon-button>
-			<div style="cursor: move; -webkit-app-region: drag;" flex>
-			Appolymer
-			</div>
-			<paper-icon-button icon="remove" on-click='{{minimizeButtonHandler}}'></paper-icon-button>
-			<paper-icon-button icon="fullscreen" on-click='{{maximizeButtonHandler}}'></paper-icon-button>
-			<paper-icon-button icon="close" on-click='{{exitButtonHandler}}'></paper-icon-button>
-			</core-toolbar>
-			<div class="content" horizontal center-justified layout>
-			<core-icon class="polymer256x256" src="images/polymer.png"></core-icon>
-			</div>
-			</core-header-panel> -->
 			<script>
 				var appolymer = document.querySelector('#appolymer');
 				appolymer.minimizeButtonHandler = function() {
