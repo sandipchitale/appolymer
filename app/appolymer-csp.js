@@ -2741,8 +2741,4 @@
 				appolymer.exitButtonHandler = function() {
 					chrome.app.window.current().close();
 				};
-				appolymer.cpuInfo = '';
-				chrome.system.cpu.getInfo(function(cpuInfo) {
-					appolymer.cpuInfo = JSON.stringify(cpuInfo, null, '    ');
-				});
 				

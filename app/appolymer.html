@@ -18,7 +18,7 @@
 			<core-header-pane flex>
 				<core-toolbar>
 					<paper-icon-button icon="polymer"></paper-icon-button>
-					<div style="-webkit-app-region: drag;" flex>
+					<div style="cursor: move; -webkit-app-region: drag;" flex>
 						Appolymer
 					</div>
 					<paper-icon-button icon="remove" on-click='{{minimizeButtonHandler}}'></paper-icon-button>
@@ -43,10 +43,6 @@
 				appolymer.exitButtonHandler = function() {
 					chrome.app.window.current().close();
 				};
-				appolymer.cpuInfo = '';
-				chrome.system.cpu.getInfo(function(cpuInfo) {
-					appolymer.cpuInfo = JSON.stringify(cpuInfo, null, '    ');
-				});
 				</script>
 		</template>
 	</body>
