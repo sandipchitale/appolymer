@@ -7,7 +7,7 @@
 			"page": "background.html"
 		}
 	},
-	"permissions": ["system.cpu", "clipboardWrite"],
+	"permissions": [],
 	"icons": {
 		"16": "appolymer16.png",
 		"128": "appolymer128.png"
