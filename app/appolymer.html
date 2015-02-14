@@ -8,27 +8,47 @@
 
 		<link rel="stylesheet" href="css/appolymer.css">
 		<link rel="import" href="components/core-header-panel/core-header-panel.html">
-		<link rel="import" href="components/core-toolbar/core-toolbar.html">
 		<link rel="import" href="components/core-icon/core-icon.html">
-		<link rel="import" href="components/core-list/core-list.html">
+		<link rel="import" href="components/core-item/core-item.html">
+		<link rel="import" href="components/core-menu/core-menu.html">
+		<link rel="import" href="components/core-scaffold/core-scaffold.html">
+		<link rel="import" href="components/core-toolbar/core-toolbar.html">
 		<link rel="import" href="components/paper-icon-button/paper-icon-button.html">
 	</head>
 	<body fullbleed layout vertical>
 		<template id="appolymer" is="auto-binding">
-			<core-header-pane flex>
-				<core-toolbar>
-					<paper-icon-button icon="polymer"></paper-icon-button>
-					<div style="cursor: move; -webkit-app-region: drag;" flex>
-						Appolymer
-					</div>
-					<paper-icon-button icon="remove" on-click='{{minimizeButtonHandler}}'></paper-icon-button>
-					<paper-icon-button icon="fullscreen" on-click='{{maximizeButtonHandler}}'></paper-icon-button>
-					<paper-icon-button icon="close" on-click='{{exitButtonHandler}}'></paper-icon-button>
-				</core-toolbar>
+			<core-scaffold mode="standard">
+				<core-header-panel navigation flex>
+					<core-toolbar style="cursor: move; -webkit-app-region: drag;">
+						Settings
+					</core-toolbar>
+					<core-menu theme="core-light-theme">
+						<core-item icon="stars" label="About"></core-item>
+						<core-item icon="help" label="Help"></core-item>
+					</core-menu>
+				</core-header-panel>
+					<div tool style="cursor: move; -webkit-app-region: drag;" flex> Appolymer </div>
+					<paper-icon-button tool icon="remove" on-click='{{minimizeButtonHandler}}'></paper-icon-button>
+					<paper-icon-button tool icon="fullscreen" on-click='{{maximizeButtonHandler}}'></paper-icon-button>
+					<paper-icon-button tool icon="close" on-click='{{exitButtonHandler}}'></paper-icon-button>
 				<div class="content" horizontal center-justified layout>
-                	<core-icon class="polymer256x256" src="images/polymer.png"></core-icon>
+					<core-icon class="polymer256x256" src="images/polymer.png"></core-icon>
 				</div>
-			</core-header-panel>
+			</core-scaffold>
+			<!-- <core-header-pane flex>
+			<core-toolbar>
+			<paper-icon-button icon="polymer"></paper-icon-button>
+			<div style="cursor: move; -webkit-app-region: drag;" flex>
+			Appolymer
+			</div>
+			<paper-icon-button icon="remove" on-click='{{minimizeButtonHandler}}'></paper-icon-button>
+			<paper-icon-button icon="fullscreen" on-click='{{maximizeButtonHandler}}'></paper-icon-button>
+			<paper-icon-button icon="close" on-click='{{exitButtonHandler}}'></paper-icon-button>
+			</core-toolbar>
+			<div class="content" horizontal center-justified layout>
+			<core-icon class="polymer256x256" src="images/polymer.png"></core-icon>
+			</div>
+			</core-header-panel> -->
 			<script>
 				var appolymer = document.querySelector('#appolymer');
 				appolymer.minimizeButtonHandler = function() {
@@ -43,7 +63,7 @@
 				appolymer.exitButtonHandler = function() {
 					chrome.app.window.current().close();
 				};
-				</script>
+			</script>
 		</template>
 	</body>
 </htmL>

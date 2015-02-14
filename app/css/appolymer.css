@@ -11,9 +11,14 @@ a {
 	text-decoration: none;
 }
 
-core-toolbar {
-	background-color: #4A148C;
-	color: #FFF;
+core-scaffold::shadow core-toolbar {
+  background-color: #802041;
+  color: white;
+}
+
+core-scaffold core-header-panel core-toolbar {
+  background-color: #26327F;
+  color: white;
 }
 
 .card {
